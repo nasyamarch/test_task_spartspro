@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.wrapper {
+    margin: 0 240px 50px 240px;
+    display: flex;
+    flex-direction: column;
+}
