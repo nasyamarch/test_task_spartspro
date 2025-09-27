@@ -370,7 +370,7 @@ button:disabled {
         background-color: #fff;
     }
     .header.active {
-        border-bottom: 1px solid #eaeff4;
+        /*border-bottom: 1px solid #eaeff4;*/
         background-color: #fff;
         position: fixed;
         margin-bottom: 10px;
@@ -391,17 +391,12 @@ button:disabled {
         position: fixed;
         top: 0;
         width: 100vw;
-        height: 458px;
+        border-bottom: 1px solid #eaeff4;
         margin: 0;
-        /*background-color: #fff;*/
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-    }
-
-    .header_container.active > .header_logo {
-        top: -190px;
     }
 
     .header_logo {
@@ -415,11 +410,6 @@ button:disabled {
         justify-content: flex-start;
         align-items: center;
 
-    }
-
-    .header_container.active > .header_burger__mobile {
-        top: -190px;
-        /*background-color: #fff;*/
     }
 
     .header_burger__mobile {
@@ -491,7 +481,7 @@ button:disabled {
     }
 
     .menu_mobile.active {
-        top: 80.5px;
+        top: 80px;
         transition: all 0.6s ease 0s;
         user-select: none;
         -webkit-user-select: none;
