@@ -23,7 +23,7 @@ html, body {
     height: 80px;
     align-items: center;
     justify-content: flex-start;
-    max-width: 1920px;
+    /*max-width: 1920px;*/
     padding-left: 12.5vw;
 }
 
@@ -285,19 +285,27 @@ button:disabled {
     }
 }
 
-@media (min-width: 1250px) and (max-width: 1439px) {
-    .main {
-        padding: 0 9.7vw 50px 9.7vw;
+@media (max-width: 1439px) {
+    .header {
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .header_container {
-        box-sizing: initial;
-        width: 180px;
+        box-sizing: border-box;
         padding-left: 9.7vw;
     }
-
     .menu {
-        padding-left: 9vw;
+        box-sizing: border-box;
+        padding-right: 9.7vw;
+        padding-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .main {
+        padding: 0 9.7vw 50px 9.7vw;
     }
 
     .recommendations_cards {
@@ -307,20 +315,13 @@ button:disabled {
         align-content: space-between;
         margin: 30px 0;
     }
-
     .recommendations_item {
         width: 39.2vw;
         height: 220px;
     }
-
     .section_button {
         margin-bottom: 80px;
     }
-
-    .about-company_description {
-        width: 39.2vw;
-    }
-
     .about-company_images__lift1 {
         width: 565px;
         height: 161px;
@@ -330,16 +331,47 @@ button:disabled {
         width: 270px;
         height: 129px;
     }
+    .about-company_container {
+        box-sizing: border-box;
+        gap: 30px;
+        border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .about-company_description {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 30px 0 0 0;
+        height: auto;
+    }
 
     .about-company_description > p {
-        width: 39.2vw;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
-@media (min-width: 1160px) and (max-width: 1250px) {
+@media (max-width: 1250px) {
+    .header_container {
+        box-sizing: border-box;
+
+        padding-left: 12.5vw;
+    }
+
     .menu * {
         gap: 2vw;
-        margin-left: 20px;
+        /*margin-left: 20px;*/
+    }
+
+    .menu {
+        box-sizing: border-box;
+        padding-right: 12.5vw;
+        padding-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
     }
 
     .recommendations_item_caption {
@@ -352,6 +384,38 @@ button:disabled {
 
     .section_button {
         margin-bottom: 50px;
+    }
+
+    .about-company_container {
+        box-sizing: border-box;
+        flex-direction: column;
+        /* gap: 30px; */
+        border-radius: 20px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .about-company_images__lift1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-company_images__lifts > img {
+        width: 50%;
+        height: auto;
+    }
+
+    .about-company_description {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 30px 0 0 0;
+        height: auto;
+    }
+
+    .about-company_description > p {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -841,5 +905,10 @@ button:disabled {
     .about-company_images__lifts > img {
         width: 142px;
         height: auto;
+    }
+}
+@media (min-width: 1921px) {
+    .recommendations_cards {
+         max-width: 100%;
     }
 }
