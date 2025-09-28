@@ -422,7 +422,8 @@ button:disabled {
 @media (max-width: 1160px) {
     .header {
         display: flex;
-        position: relative;
+        position: fixed;
+        /*position: relative;*/
         justify-content: space-between;
         width: 100%;
         height: 80px;
@@ -449,6 +450,9 @@ button:disabled {
 
     .header_container {
         box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -588,7 +592,7 @@ button:disabled {
     }
 
     .main {
-        padding: 0 16.8vw;
+        padding: 80px 16.8vw  0 16.8vw;
     }
 
     .section_recommendations {
@@ -643,7 +647,10 @@ button:disabled {
 }
 
 @media (max-width: 768px) {
-    .main, .menu {
+    .main {
+        padding: 50px 12.4vw 0 12.4vw;
+    }
+    .menu {
         padding: 0 12.4vw;
     }
 
@@ -680,7 +687,12 @@ button:disabled {
     }
 }
 @media (max-width: 576px) {
-    .main, .menu {
+
+    .main {
+        padding: 50px 18vw;
+        box-sizing: border-box;
+    }
+    .menu {
         padding: 0 18vw;
         box-sizing: border-box;
     }
@@ -775,7 +787,11 @@ button:disabled {
 }
 
 @media (max-width: 565px) {
-    .main, .menu {
+    .main {
+        padding: 50px calc(16vw - 20px) 0 calc(16vw - 20px);
+        box-sizing: border-box;
+    }
+    .menu {
         padding: 0 calc(16vw - 20px);
         box-sizing: border-box;
     }
@@ -795,7 +811,12 @@ button:disabled {
     }
 }
 @media (max-width: 480px) {
-    .main, .menu {
+
+    .main {
+        padding: 50px calc(16vw - 30px) 0 calc(16vw - 30px);
+        box-sizing: border-box;
+    }
+    .menu {
         padding: 0 calc(16vw - 30px);
         box-sizing: border-box;
     }
@@ -806,8 +827,12 @@ button:disabled {
 }
 
 @media (max-width: 426px) {
-    .main, .menu {
+    .menu {
         padding: 0 4.5vw;
+        box-sizing: border-box;
+    }
+    .main {
+        padding: 50px 4.5vw 0 4.5vw;
         box-sizing: border-box;
     }
 
@@ -839,8 +864,13 @@ button:disabled {
 }
 
 @media (max-width: 390px) {
-    .main, .menu {
+    .menu {
         padding: 0 3.5vw;
+        box-sizing: border-box;
+    }
+
+    .main {
+        padding: 50px 3.5vw 0 3.5vw;
         box-sizing: border-box;
     }
 
@@ -895,20 +925,65 @@ button:disabled {
         font-size: 16px;
     }
 }
-
-/*Бонус с вёрсткой для узкоформатных телефонов */
-
-@media (max-width: 320px) {
-    .main, .menu {
-        padding: 0 2.5vw;
+@media (max-width: 376px) {
+    .menu {
+        padding: 0 3vw;
         box-sizing: border-box;
     }
 
+    .main {
+        padding: 50px 3vw 0 3vw;
+        box-sizing: border-box;
+    }
+
+    .header_container {
+        padding: 0 3vw;
+    }
+
+    .header_container.active {
+        box-sizing: border-box;
+        padding: 0 3vw;
+    }
+
+    .recommendations_cards {
+        justify-content: space-between;
+    }
+    .recommendations_item {
+        margin-bottom: 15px;
+    }
+    .about-company_images__lift1 {
+        width: 359px;
+        height: auto;
+    }
+
+    .about-company_images__lifts > img {
+        width: 171px;
+        height: auto;
+    }
+
+    .section_title {
+        font-size: 18px;
+        line-height: 120%;
+    }
+}
+
+
+/*Бонус с вёрсткой для узкоформатных телефонов */
+
+@media (max-width: 321px) {
+    .menu {
+        padding: 0 1.5vw;
+        box-sizing: border-box;
+    }
+    .main {
+        padding: 50px 1.5vw 0 1.5vw;
+        box-sizing: border-box;
+    }
     .recommendations_item {
         width: 150px;
         height: 373px;
         flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .recommendations_item_description {
@@ -924,7 +999,10 @@ button:disabled {
     .recommendations_item_availability {
         font-size: 14px;
     }
-
+    .section_title {
+        font-size: 17px;
+        line-height: 120%;
+    }
     .more_button {
         width: 130px;
         height: 43px;
